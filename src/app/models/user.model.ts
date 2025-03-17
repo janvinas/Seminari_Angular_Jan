@@ -1,12 +1,11 @@
 export interface User {
-    id: number;
+    _id: string;
     name: string;
     age: number;
     email: string;
   }
 export class User implements User {
-    constructor(     
-      
+    constructor(
+
     ) {}
 }
-  

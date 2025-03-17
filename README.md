@@ -1,5 +1,14 @@
 # AngularSeminari6
 
+## Fonts
+
+- https://angular.dev/guide/components
+- https://stackoverflow.com/questions/35932074/no-provider-for-templateref-ngif-templateref
+- https://v17.angular.io/guide/observables-in-angular
+- https://angular.dev/tools/cli
+- https://v17.angular.io/guide/template-reference-variables
+- https://stackoverflow.com/questions/56341320/applying-css-from-an-angular-component-to-a-sub-component
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
 ## Development server

@@ -20,4 +20,12 @@ export class UserService {
   getUser(id: number): Observable<User>{
     return this.http.get<User>(this.apiUrl+"/"+id);
   }
+
+  registerUser(user: {name: string; age: number; email: string}): Observable<Object>{
+    return this.http.post(this.apiUrl, user);
+  }
+
+  deleteUser(id: string): Observable<Object> {
+    return this.http.delete(this.apiUrl + "/" + id);
+  }
 }

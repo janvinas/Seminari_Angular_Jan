@@ -1,0 +1,21 @@
+<div class="register-div">
+  <form [formGroup]="formularioRegister" (ngSubmit)="registerUser()">
+    <h3>Add user</h3>
+    <label for="name" class="form-label">Username: </label>
+    <input [ngClass]="{'is-invalid': hasError('name', 'required')}" class="form-control" id="name" formControlName="name">
+    <div class="red-text" *ngIf="hasError('name', 'required')">Nom d'usuari obligatori</div>
+    <br>
+
+    <label for="age" class="form-label">Edat: </label>
+    <input [ngClass]="{'is-invalid': hasError('age', 'required')}" class="form-control" id="age" formControlName="age">
+    <div class="red-text" *ngIf="hasError('age', 'required')">Edat obligatòria</div>
+    <br>
+
+    <label for="email" class="form-label">Email: </label>
+    <input [ngClass]="{'is-invalid': hasError('email', 'required')}" class="form-control" id="email" formControlName="email">
+    <div class="red-text" *ngIf="hasError('email', 'required') || hasError('email', 'email')">Correu electrònic obligatori</div>
+    <br>
+
+    <button type="submit">Registrar usuari</button>
+  </form>
+</div>

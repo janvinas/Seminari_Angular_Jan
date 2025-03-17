@@ -47,8 +47,8 @@ export class ColaboradoresComponent {
 
   }
 
-  trackByUserId(index: number, user: any): number {
-    return user.id;
+  trackByUserId(index: number, user: any): string {
+    return user._id;
   }
 
   //Cuando se hace click en el nombre de algun usuario listado se pasa el nombre de este al componente usuario, que canviara el nombre del usuario al del listado.
@@ -68,7 +68,9 @@ export class ColaboradoresComponent {
     dialogRef.afterClosed().subscribe((confirmed: boolean) => {
       if (confirmed) {
         console.log("delete User ",i);
-        this.users.splice(i, 1);
+        this.userService.deleteUser(this.users[i]._id).subscribe({
+          next: () => this.users.splice(i, 1),
+        });
     }
     });
   }

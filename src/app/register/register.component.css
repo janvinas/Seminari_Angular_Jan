@@ -1,0 +1,22 @@
+.register-div {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 1em;
+  width: 400px;
+  left: 50%;
+  transform: -50%;
+}
+
+.red-text {
+  color: red;
+}
+
+input {
+  margin-bottom: 1em;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
